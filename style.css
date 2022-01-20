@@ -1,0 +1,183 @@
+*, *::before, *::after{
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+ --pale-blue:#e0e8ff;
+--bright-blue:#3829e0;
+--very-pale-blue:#f5f7ff;
+--desaturated-blue:#7280a7;
+--dark-blue:#1f2f56;
+font-family: 'Red Hat Display', sans-serif;
+font-size: 62.5%;
+}
+
+
+body{
+background:url(./images/pattern-desktop-mobile.svg), var(--very-pale-blue);
+padding:8rem 0;
+background-repeat: no-repeat;
+background-size: cover;
+position:relative;
+
+}
+
+
+body{
+    opacity:0.8;
+}
+
+body::after{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:url("./design/desktop-design.jpg") ;
+opacity:.6;
+filter: blur(1px);
+animation:myani 1s infinite alternate;
+}
+
+@keyframes myani {
+    to{filter:blur(3px);}
+}
+
+.container{
+    width:90%;
+    margin:0 auto;
+max-width:456px;
+ border:1px solid;
+    border-radius: 10px;
+    margin-top:2rem;
+
+}
+
+.hero{
+    display:block;
+    width:100%;
+    border-radius: 8px  8px 0 0;;
+
+ 
+}
+
+article{
+    display:flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+border-radius: 8px;
+
+margin:0 auto;
+background-color: white;;
+text-align: center;
+font-weight:500;
+}
+
+h1{
+    color:var(--dark-blue);
+font-size:2rem;
+margin:2.4rem auto;
+font-weight:800;
+}
+
+p{
+
+color:var(--desaturated-blue);
+opacity:.8;
+font-size: 1.3rem;
+letter-spacing: .072em;
+line-height: 1.7em;
+padding:0 3em;
+text-align: center;
+font-weight:500;
+margin-bottom:2rem;
+}
+
+.pricing{
+width:100%;
+display:flex;
+justify-content: space-between;
+align-items: stretch;
+margin-bottom:2rem;
+background-color: var(--very-pale-blue);
+padding:1.3em;
+width:90%;
+border-radius:5px;
+
+}
+.pricing >*{
+    flex: 1 ;
+}
+
+.quaver{
+  background-image: url("/images/icon-music.svg");
+  background-position: center;
+  background-repeat: no-repeat; 
+  height:100%;
+  border-radius: 50%;
+ }
+
+
+ 
+.plan{
+flex:2;
+}
+
+.plan div:nth-child(1){
+color:var(--dark-blue);
+font-size:1.4em;
+font-weight:600;
+margin:1rem 0;
+letter-spacing: -0.031em;
+} 
+
+.plan div:nth-child(2){
+color:var(--desaturated-blue);
+font-size:1.5em;
+margin:1rem 0;
+}
+
+.change{
+align-self:center;
+}
+.change>a {
+    font-size:1.3em;
+    letter-spacing: -0.002rem;
+    color:var(--desaturated-blue);
+    font-weight: 900;
+}
+
+.change>a:hover{
+    color:black;
+}
+
+.button{
+    width:90%;
+cursor:pointer;
+    border-radius:10px;
+    padding:.9em ;
+    background-color: var(--bright-blue);
+    margin:1rem 0;
+    color:var(--very-pale-blue);
+    font-size: 1.5rem;
+    font-weight: 800;
+    box-shadow: 1px 1px 2px 2px var(--pale-blue);
+}
+.button.cancel{
+    background-color:transparent;
+    color:var(--dark-blue);
+    box-shadow: none;
+    margin-bottom: 3rem;
+    opacity:.8
+}
+.button:hover{
+    background-color: var(--dark-blue);
+}
+.button.cancel:hover{
+    background-color: var(--very-pale-blue);
+}
